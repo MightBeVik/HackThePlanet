@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - Hack The Planet CTF</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <canvas class="matrix-bg" id="matrixBg"></canvas>
+
+    <div class="container">
+        <header>
+            <h1>&#60; REGISTRATION TERMINAL &#62;</h1>
+            <p class="subtitle">Hack The Planet CTF - Secure Enrollment</p>
+        </header>
+
+        <div class="transmission">
+            <p class="transmission-text">:: SECURE CHANNEL ESTABLISHED ::</p>
+            <p>Enter your credentials to join the uprising. Your team awaits activation.</p>
+        </div>
+
+        <div class="registration-form">
+            <form id="registrationForm">
+                <div class="form-section">
+                    <h3>[TEAM INITIALIZATION]</h3>
+                    
+                    <div class="form-group">
+                        <label for="teamName">Team Name:</label>
+                        <input type="text" id="teamName" name="teamName" required placeholder="Enter team name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamSize">Team Size:</label>
+                        <select id="teamSize" name="teamSize" required>
+                            <option value="">Select...</option>
+                            <option value="1">1 Hacker</option>
+                            <option value="2">2 Hackers</option>
+                            <option value="3">3 Hackers</option>
+                            <option value="4">4 Hackers</option>
+                            <option value="5">5+ Hackers</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Participation Mode:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="mode" value="online" required> Online Only (March 20-21)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="mode" value="inperson" required> In-Person (March 21)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="mode" value="both" required> Both (Online + In-Person)
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>[LEAD HACKER CREDENTIALS]</h3>
+                    
+                    <div class="form-group">
+                        <label for="leaderName">Name:</label>
+                        <input type="text" id="leaderName" name="leaderName" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leaderEmail">Email:</label>
+                        <input type="email" id="leaderEmail" name="leaderEmail" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="leaderPhone">Phone:</label>
+                        <input type="tel" id="leaderPhone" name="leaderPhone" required placeholder="(555) 123-4567">
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>[TECHNICAL READINESS]</h3>
+                    
+                    <div class="form-group">
+                        <label>Linux VM Setup:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="linuxVM" value="yes" required> Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="linuxVM" value="planning" required> Planning to setup
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="linuxVM" value="no" required> Not yet
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="linuxDist">Linux Distribution:</label>
+                        <select id="linuxDist" name="linuxDist">
+                            <option value="">Select...</option>
+                            <option value="kali">Kali Linux</option>
+                            <option value="parrot">Parrot OS</option>
+                            <option value="ubuntu">Ubuntu</option>
+                            <option value="debian">Debian</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>USB Wireless Adapter:</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="adapter" value="yes" required> Yes
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="adapter" value="planning" required> Planning to get
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="adapter" value="no" required> No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>[EXPERIENCE LEVEL]</h3>
+                    
+                    <div class="form-group">
+                        <label for="experience">CTF Experience:</label>
+                        <select id="experience" name="experience" required>
+                            <option value="">Select...</option>
+                            <option value="beginner">Beginner (First time)</option>
+                            <option value="intermediate">Intermediate (Few CTFs)</option>
+                            <option value="advanced">Advanced (Multiple CTFs)</option>
+                            <option value="expert">Expert (Competition veteran)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Areas of Interest:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="crypto"> Cryptography
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="web"> Web Security
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="reverse"> Reverse Engineering
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="binary"> Binary Exploitation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="forensics"> Forensics
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="interests" value="stego"> Steganography
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>[AGREEMENTS]</h3>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label large">
+                            <input type="checkbox" id="ethics" name="ethics" required>
+                            I agree to follow all Rules of Engagement and conduct myself ethically
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="checkbox-label large">
+                            <input type="checkbox" id="waiver" name="waiver" required>
+                            I have the necessary equipment and am prepared to compete
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Additional Notes:</label>
+                        <textarea id="notes" name="notes" placeholder="Any questions or special requirements..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="button-submit">TRANSMIT CREDENTIALS</button>
+                    <button type="reset" class="button-reset">CLEAR CACHE</button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <p>✓ CREDENTIALS RECEIVED</p>
+                <p>Your team has been registered successfully.</p>
+                <p>Check your email for confirmation.</p>
+                <p style="margin-top: 20px; font-style: italic;">See you on the battlefield, hacker.</p>
+                <a href="home.html" style="color: #0f0; text-decoration: none; margin-top: 20px; display: inline-block;">[ RETURN TO MAIN TERMINAL ]</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>[WELCOME TO THE UNDERGROUND] | Stay Curious | Stay Ethical</p>
+        </footer>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
