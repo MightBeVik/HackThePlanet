@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <canvas class="matrix-bg" id="matrixBg"></canvas>
+    <canvas class="star-bg" id="starBg"></canvas>
+
+    <a href="home.html" class="back-button">← Back to Rules</a>
 
     <div class="container">
         <header>
@@ -195,8 +197,8 @@
                 <p>✓ CREDENTIALS RECEIVED</p>
                 <p>Your team has been registered successfully.</p>
                 <p>Check your email for confirmation.</p>
-                <p style="margin-top: 20px; font-style: italic;">See you on the battlefield, hacker.</p>
-                <a href="home.html" style="color: #0f0; text-decoration: none; margin-top: 20px; display: inline-block;">[ RETURN TO MAIN TERMINAL ]</a>
+                <p class="success-note">See you on the battlefield, hacker.</p>
+                <a href="home.html" class="return-link">[ RETURN TO MAIN TERMINAL ]</a>
             </div>
         </div>
 
@@ -206,5 +208,6 @@
     </div>
 
     <script src="register.js"></script>
+    <script src="cursor.js"></script>
 </body>
 </html>

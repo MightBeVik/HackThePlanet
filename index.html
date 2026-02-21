@@ -7,18 +7,75 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <canvas id="codeRain"></canvas>
-    
-    <div class="content">
-        <h1>&#60;/HACK THE PLANET&#62;</h1>
-        <p class="subtitle">CTF Event - Winter 2026 @ SAIT</p>
-        <p class="click-hint">[ CLICK ANYWHERE TO ENTER ]</p>
+    <canvas id="starfield"></canvas>
+
+    <nav class="desktop-icons" aria-label="Quick links">
+        <a class="desktop-icon" href="https://www.google.com/maps/dir//Sait+School+For+Advanced+Digital+Technology,+Calgary,+AB+T2P+3P4/@51.0475808,-114.0635453,19z/data=!3m1!5s0x53716fdabd7eede5:0x33b19696aea6c84d!4m8!4m7!1m0!1m5!1m1!1s0x53716ffe836d2b73:0xdd0a80029d6be008!2m2!1d-114.0630896!2d51.0475579?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D">
+            <span class="icon-glyph" aria-hidden="true">🗺</span>
+            <span class="icon-label">Maps</span>
+        </a>
+        <a class="desktop-icon" href="https://calendar.google.com/calendar/r/eventedit?text=Hack%20the%20Planet:%20Cyber%20Security%20Program%20Capture%20the%20Flag%20Event%20&dates=20260320T1200-0600/20260321T1600-0600&details=">
+            <span class="icon-glyph" aria-hidden="true">📅</span>
+            <span class="icon-label">Calendar</span>
+        </a>
+        <a class="desktop-icon" href="https://www.instagram.com/">
+            <span class="icon-glyph" aria-hidden="true">📸</span>
+            <span class="icon-label">Insta</span>
+        </a>
+        <a class="desktop-icon" href="https://discord.com/">
+            <span class="icon-glyph" aria-hidden="true">💬</span>
+            <span class="icon-label">Discord</span>
+        </a>
+        <a class="desktop-icon" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <span class="icon-glyph" aria-hidden="true">🎵</span>
+            <span class="icon-label">Music</span>
+        </a>
+    </nav>
+
+    <div class="boot-window" role="dialog" aria-labelledby="bootTitle">
+        <div class="titlebar">
+            <span id="bootTitle" class="title-text">sys/init/hacktheplanet</span>
+            <div class="title-controls" aria-hidden="true">
+                <span class="title-btn">_</span>
+                <span class="title-btn">□</span>
+                <span class="title-btn">×</span>
+            </div>
+        </div>
+
+        <div class="window-content">
+            <ul class="boot-log">
+                <li>[0.000] loading vikmadethis.js...</li>
+                <li>[0.013] mounting /dev/audio/thisgoeshard.mp4</li>
+                <li>[0.029] initializing clankeroverlord.py</li>
+                <li>[0.037] saitctf.service started</li>
+                <li>[0.044] all systems nominal</li>
+                <li>[0.067] technical team blessed this......</li>
+            </ul>
+
+            <button id="continueBtn" class="win-btn" type="button">continue</button>
+        </div>
     </div>
 
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-text">INITIALIZING...</div>
+        <div class="loading-window" role="status" aria-live="polite">
+            <div class="titlebar">
+                <span class="title-text">dial-up connection</span>
+                <div class="title-controls" aria-hidden="true">
+                    <span class="title-btn">×</span>
+                </div>
+            </div>
+
+            <div class="window-content">
+                <p class="loading-text" id="loadingText">connecting to hacktheplanet.net...</p>
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p class="loading-percent" id="loadingPercent">0%</p>
+            </div>
+        </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="cursor.js"></script>
 </body>
 </html>
