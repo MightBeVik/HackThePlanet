@@ -4,6 +4,25 @@
     box-sizing: border-box;
 }
 
+/* Retro CRT phosphor glow */
+.desktop-icon:hover .icon-glyph svg,
+.desktop-icon:focus .icon-glyph svg {
+    filter: drop-shadow(0 0 8px #00ffff) 
+            drop-shadow(0 0 12px #00ffff) 
+            brightness(1.4);
+    animation: crt-flicker 0.15s infinite;
+}
+
+@keyframes crt-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.95; }
+}
+
+.desktop-icon:hover .icon-label,
+.desktop-icon:focus .icon-label {
+    text-shadow: 0 0 6px #00ffff, 1px 1px 0 #000;
+}
+
 body {
     background-color: #000;
     background-image: url('images/custom-background.png');

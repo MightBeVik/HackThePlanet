@@ -4,33 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hack The Planet - CTF Winter 2026</title>
+    <!-- For Styling icon color effects -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="./index.css?v=20260220">
 </head>
 <body>
     <canvas id="starfield"></canvas>
 
-    <nav class="desktop-icons" aria-label="Quick links">
-        <a class="desktop-icon" href="https://www.google.com/maps/dir//Sait+School+For+Advanced+Digital+Technology,+Calgary,+AB+T2P+3P4/@51.0475808,-114.0635453,19z/data=!3m1!5s0x53716fdabd7eede5:0x33b19696aea6c84d!4m8!4m7!1m0!1m5!1m1!1s0x53716ffe836d2b73:0xdd0a80029d6be008!2m2!1d-114.0630896!2d51.0475579?entry=ttu&g_ep=EgoyMDI2MDIxNy4wIKXMDSoASAFQAw%3D%3D">
-            <span class="icon-glyph" aria-hidden="true">🗺</span>
-            <span class="icon-label">Maps</span>
-        </a>
-        <a class="desktop-icon" href="https://calendar.google.com/calendar/r/eventedit?text=Hack%20the%20Planet:%20Cyber%20Security%20Program%20Capture%20the%20Flag%20Event%20&dates=20260320T1200-0600/20260321T1600-0600&details=">
-            <span class="icon-glyph" aria-hidden="true">📅</span>
-            <span class="icon-label">Calendar</span>
-        </a>
-        <a class="desktop-icon" href="https://www.instagram.com/">
-            <span class="icon-glyph" aria-hidden="true">📸</span>
-            <span class="icon-label">Insta</span>
-        </a>
-        <a class="desktop-icon" href="https://discord.com/">
-            <span class="icon-glyph" aria-hidden="true">💬</span>
-            <span class="icon-label">Discord</span>
-        </a>
-        <a class="desktop-icon" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-            <span class="icon-glyph" aria-hidden="true">🎵</span>
-            <span class="icon-label">Music</span>
-        </a>
-    </nav>
+<nav class="desktop-icons" aria-label="Quick links">
+    <!-- NAVIGATION - Pixelated Globe -->
+<!-- NAVIGATION - IE Globe with Orbital Ring -->
+<a class="desktop-icon" href="https://www.google.com/maps">
+    <span class="icon-glyph">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <!-- Orbital ring (back) -->
+            <ellipse cx="16" cy="16" rx="12" ry="5" fill="none" stroke="#c0c0c0" stroke-width="2.5" transform="rotate(-25 16 16)"/>
+            
+            <!-- Globe -->
+            <circle cx="16" cy="16" r="8" fill="#00a8e8" stroke="#000" stroke-width="0.5"/>
+            
+            <!-- Continents -->
+            <path d="M 11 14 L 13 14 L 13 17 L 12 17 Z" fill="#00d084"/>
+            <path d="M 15 13 L 18 13 L 18 18 L 16 18 Z" fill="#00d084"/>
+            <path d="M 19 14 L 21 14 L 21 17 L 20 17 Z" fill="#00d084"/>
+            
+            <!-- Highlight -->
+            <circle cx="19" cy="13" r="2.5" fill="#fff" opacity="0.4"/>
+            
+            <!-- Orbital ring (front) -->
+            <path d="M 8 18 Q 10 20 13 21" stroke="#e0e0e0" stroke-width="2.5" fill="none"/>
+            <path d="M 19 11 Q 22 12 24 14" stroke="#e0e0e0" stroke-width="2.5" fill="none"/>
+        </svg>
+    </span>
+    <span class="icon-label">Navigate</span>
+</a>
+
+    <!-- CALENDAR - Pixel Art Style -->
+    <a class="desktop-icon" href="https://calendar.google.com">
+        <span class="icon-glyph">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <!-- Calendar body -->
+                <rect x="8" y="10" width="16" height="14" fill="#ffffff" stroke="#000000" stroke-width="1"/>
+                <!-- Red header -->
+                <rect x="8" y="10" width="16" height="3" fill="#ff0000"/>
+                <!-- Binding rings -->
+                <rect x="10" y="8" width="2" height="3" fill="#000000"/>
+                <rect x="20" y="8" width="2" height="3" fill="#000000"/>
+                <!-- Grid lines (chunky) -->
+                <rect x="8" y="16" width="16" height="1" fill="#000000"/>
+                <rect x="8" y="19" width="16" height="1" fill="#000000"/>
+                <rect x="8" y="22" width="16" height="1" fill="#000000"/>
+                <rect x="12" y="13" width="1" height="11" fill="#000000"/>
+                <rect x="16" y="13" width="1" height="11" fill="#000000"/>
+                <rect x="20" y="13" width="1" height="11" fill="#000000"/>
+                <!-- Today marker (red square) -->
+                <rect x="17" y="17" width="2" height="2" fill="#ff0000"/>
+            </svg>
+        </span>
+        <span class="icon-label">Schedule</span>
+    </a>
+
+    <!-- Social -->
+    <a class="desktop-icon" href="https://instagram.com">
+        <span class="icon-glyph">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <!-- Person 1 head -->
+                <rect x="8" y="10" width="4" height="4" fill="#ffff00"/>
+                <rect x="9" y="9" width="2" height="1" fill="#ffff00"/>
+                <!-- Person 1 body -->
+                <rect x="7" y="14" width="6" height="2" fill="#0000ff"/>
+                <rect x="6" y="16" width="8" height="6" fill="#0000ff"/>
+                <rect x="7" y="22" width="2" height="4" fill="#0000ff"/>
+                <rect x="11" y="22" width="2" height="4" fill="#0000ff"/>
+                
+                <!-- Person 2 head (overlapping) -->
+                <rect x="18" y="12" width="4" height="4" fill="#ffff00"/>
+                <rect x="19" y="11" width="2" height="1" fill="#ffff00"/>
+                <!-- Person 2 body -->
+                <rect x="17" y="16" width="6" height="2" fill="#ff00ff"/>
+                <rect x="16" y="18" width="8" height="6" fill="#ff00ff"/>
+                <rect x="17" y="24" width="2" height="4" fill="#ff00ff"/>
+                <rect x="21" y="24" width="2" height="4" fill="#ff00ff"/>
+            </svg>
+        </span>
+        <span class="icon-label">Connect</span>
+    </a>
+
+<!-- SUPPORT - Windows Help Icon -->
+<a class="desktop-icon" href="https://discord.com">
+    <span class="icon-glyph">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <!-- Blue circle -->
+            <circle cx="16" cy="16" r="9" fill="#0066cc" stroke="#003d7a" stroke-width="1"/>
+            
+            <!-- Highlight gradient -->
+            <circle cx="18" cy="13" r="4" fill="#3399ff" opacity="0.4"/>
+            
+            <!-- White question mark -->
+            <path d="M 14 12 Q 14 10 16 10 Q 18 10 18 12 Q 18 13 17 14 L 16 15 L 16 17" 
+                stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="16" cy="19" r="1" fill="#fff"/>
+        </svg>
+    </span>
+    <span class="icon-label">Support</span>
+</a>
+
+    <a class="desktop-icon" href="https://youtube.com">
+        <span class="icon-glyph">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <!-- CD/Disk icon -->
+                <circle cx="16" cy="16" r="12" fill="#c0c0c0" stroke="#000" stroke-width="1"/>
+                <circle cx="16" cy="16" r="10" fill="url(#cdGradient)" stroke="#000080"/>
+                <circle cx="16" cy="16" r="3" fill="#ffffff" stroke="#000" stroke-width="1"/>
+                <circle cx="16" cy="16" r="1.5" fill="#000000"/>
+                <!-- Rainbow reflection -->
+                <path d="M 10 12 Q 16 10 22 12" stroke="#ff00ff" stroke-width="1" fill="none" opacity="0.6"/>
+                <path d="M 10 14 Q 16 12 22 14" stroke="#00ffff" stroke-width="1" fill="none" opacity="0.6"/>
+                <path d="M 10 16 Q 16 14 22 16" stroke="#ffff00" stroke-width="1" fill="none" opacity="0.6"/>
+                <defs>
+                    <radialGradient id="cdGradient">
+                        <stop offset="0%" style="stop-color:#e0e0e0"/>
+                        <stop offset="100%" style="stop-color:#808080"/>
+                    </radialGradient>
+                </defs>
+            </svg>
+        </span>
+        <span class="icon-label">Media</span>
+    </a>
+</nav>
 
     <div class="boot-window" role="dialog" aria-labelledby="bootTitle">
         <div class="titlebar">
