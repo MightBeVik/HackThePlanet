@@ -75,12 +75,14 @@ canvas {
     padding: 4px;
     border: 1px solid transparent;
     pointer-events: auto;
+    transition: transform 0.2s ease;
 }
 
 .desktop-icon:focus,
 .desktop-icon:hover {
     border-color: rgba(255, 255, 255, 0.45);
     background: rgba(16, 132, 208, 0.3);
+    transform: scale(1.9);
 }
 
 .icon-glyph {
